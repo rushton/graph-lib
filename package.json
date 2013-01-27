@@ -1,0 +1,19 @@
+{
+  "name": "graph-lib",
+  "version": "0.1.0",
+  "author": "Nicholas Rushton <nick.rushton@hotmail.com>",
+  "description": "a simple zero-configuration command-line http server",
+  "scripts": {
+    "test": "vows --spec --isolate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrushton/graph-lib.git"
+  },
+  "keywords": [
+    "visualization",
+    "svg",
+    "d3"
+  ]
+}
+
