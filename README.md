@@ -14,6 +14,29 @@ Usage
   </body>
 </html>
 ```
+
+```html
+<html>
+   <head>
+      <script src="d3.min.js"></script>
+      <script src="graphlib.js"></script>
+      <style type="text/css">
+         .node circle{
+            fill: #eee;
+            stroke: #f0f;
+         }   
+         .link {
+            stroke: #666;
+         }   
+
+      </style>
+   </head>
+   <body>
+      <div id="graph">
+      </div>
+   </body>
+</html>
+```    
 ```javascript
 var graph = graphLib('#graph', {width: 800, height: 600});
 graph.addNodes([{id: 1, label: 'Nick Rushton'},{id:2, label: 'Rick Astley'}]);
