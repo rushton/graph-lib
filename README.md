@@ -40,7 +40,7 @@ graph.addEdges([{source: 1, target: 2}]);
 
 Node Specification
 ==================
-```json
+```js
 {
    label: <string|string[]: label for the node, given an array uses line-breaks>,
    id:    <unique-id: a unique id for the node>,
