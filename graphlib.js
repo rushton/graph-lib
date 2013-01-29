@@ -607,15 +607,17 @@ function graphLib(selector, conf)
      t.each(function(d){
               var texts = typeof d.label === "string" ? [d.label] : d.label;
               var self = this;
-              texts.forEach(function(v,k){
-                 if (v.length > 0){
-                    var tspan = d3.select(self).append('tspan').text(v);
-                    var tspanElement = tspan[0][0];
-                    var x = - Math.floor((tspanElement.offsetWidth  || tspanElement.getClientRects()[0].width)/2);
-                    var y =   Math.floor((tspanElement.offsetHeight || tspanElement.getClientRects()[0].height));
-                    tspan.attr({y: k * y, x: x});
-                 }
-              })
+              if (texts){
+                 texts.forEach(function(v,k){
+                    if (v.length > 0){
+                       var tspan = d3.select(self).append('tspan').text(v);
+                       var tspanElement = tspan[0][0];
+                       var x = - Math.floor((tspanElement.offsetWidth  || tspanElement.getClientRects()[0].width)/2);
+                       var y =   Math.floor((tspanElement.offsetHeight || tspanElement.getClientRects()[0].height));
+                       tspan.attr({y: k * y, x: x});
+                    }
+                 })
+              }
             });
 
      node.exit().remove();
