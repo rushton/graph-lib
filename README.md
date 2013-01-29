@@ -37,6 +37,36 @@ graph.addNodes([{id: 1, label: 'Nick Rushton'},{id:2, label: 'Rick Astley'}]);
 graph.addEdges([{source: 1, target: 2}]);
 ```
 
+Hiding nodes:
+```javascript
+var graph = graphLib('#graph', {width:800, height: 600});
+graph.addNodes([{id:1, label:'Above & Beyond', type:'trance'},
+                               {id:2, label:'Jaytech', type:'trance'},
+                               {id:3, label:'John B', type: 'Drum & Bass'},
+                               {id:4, label:'Netsky', type:'Drum & Bass'},
+                               {id:5, label:'Danny Byrd', type: 'Drum & Bass'}]);
+graph.addEdges([{source: 1, target: 2},
+                               {source: 1, target: 3}, 
+                               {source: 2, target: 3},
+                               {source: 3, target: 4},
+                               {source: 3, target: 5},
+                               {source: 4, target: 5}]);
+
+// hide all trance nodes & connected edges
+graph.hide({type: 'trance'});
+
+//show the trance edges after 5 seconds
+setTimeout(function(){ 
+   graph.show({type:'trance'});
+ 
+   // after hide the node with id 1, then show it again after 2 seconds
+   graph.hide({id:1});
+   setTimeout(function(){
+       graph.show({id:1});
+   }, 2000);
+}, 5000);
+```
+
 
 Node Specification
 ==================
