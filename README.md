@@ -30,14 +30,14 @@ Set up our html:
 </html>
 ```    
 
-The graphing javascript:
+A basic graph:
 ```javascript
 var graph = graphLib('#graph', {width: 800, height: 600});
 graph.addNodes([{id: 1, label: 'Nick Rushton'},{id:2, label: 'Rick Astley'}]);
 graph.addEdges([{source: 1, target: 2}]);
 ```
 
-Hiding nodes:
+Hiding/Removing nodes:
 ```javascript
 var graph = graphLib('#graph', {width:800, height: 600});
 graph.addNodes([{id:1, label:'Above & Beyond', type:'trance'},
@@ -66,6 +66,12 @@ setTimeout(function(){
        graph.show({id:1});
    }, 2000);
 }, 5000);
+
+//remove node of id 4 after 9 seconds
+setTimeout(function(){
+   graph.remove({id:4});
+}, 9000)
+
 ```
 
 
