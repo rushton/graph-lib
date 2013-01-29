@@ -155,7 +155,7 @@ Config
        * contains types and styles for elements
        * each entry has a key of the type to apply the style to
        * the value contains an object which has:
-       *    type - the type of element to use for this type of node
+       *    tag - tag to use for this type of node
        *    attributes - attributes to apply to the node
        */
       style: {
